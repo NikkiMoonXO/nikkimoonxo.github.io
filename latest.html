@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The latest photos and little moments from Nikki Moon.">
+<meta name="theme-color" content="#111013"><title>Latest Images | Nikki Moon</title>
+<link rel="stylesheet" href="style.css">
+<style>.latest-intro{max-width:1400px;margin:auto;padding:70px 5% 0}.latest-intro h1{font-size:clamp(64px,8vw,110px)}.latest-intro>p:last-child{color:var(--muted);max-width:520px}.gallery-section{padding-top:55px}.latest-gallery{grid-template-columns:repeat(3,1fr)}.latest-gallery .photo:last-child{grid-column:auto;max-width:none}.latest-gallery .photo img{aspect-ratio:1;object-fit:contain;background:#1c141b}nav [aria-current]{color:var(--pink)}@media(max-width:700px){.latest-gallery{grid-template-columns:1fr 1fr}.latest-intro{padding:45px 6% 0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="index.html">NIKKI MOON <span>☾</span></a><nav aria-label="Main navigation"><a href="index.html#gallery">Gallery</a><a href="latest.html" aria-current="page">Latest Images</a><a href="index.html#about">About</a><a href="index.html#exclusive">Exclusive <small>18+</small></a></nav></header>
+<main id="main">
+<div class="latest-intro"><p class="eyebrow">FRESH FROM MY CAMERA ROLL</p><h1>Latest <em>images.</em></h1><p>The photos I’m sharing on Instagram, all together in my little corner of the internet.</p><a class="button" href="https://www.instagram.com/nikki.moon.xo/" target="_blank" rel="noopener noreferrer">Follow along on Instagram ↗</a></div>
+<section class="gallery-section" aria-labelledby="collection-title">
+<div class="section-heading"><div><p class="eyebrow"><time datetime="2026-10-05">5 OCTOBER 2026</time></p><h2 id="collection-title">My cosy corner.</h2></div><p>Fairy lights. A quiet evening. Just me.</p></div>
+<div class="gallery latest-gallery">
+<button class="photo" data-image="latest-2026-10-05-01.jpg" aria-label="View photo 1 of 7"><img src="latest-2026-10-05-01.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 1"><span>01 <i>Cosy corner</i></span></button>
+<button class="photo" data-image="latest-2026-10-05-02.jpg" aria-label="View photo 2 of 7"><img src="latest-2026-10-05-02.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 2"><span>02 <i>Cosy corner</i></span></button>
+<button class="photo" data-image="latest-2026-10-05-03.jpg" aria-label="View photo 3 of 7"><img src="latest-2026-10-05-03.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 3"><span>03 <i>Cosy corner</i></span></button>
+<button class="photo" data-image="latest-2026-10-05-04.jpg" aria-label="View photo 4 of 7"><img src="latest-2026-10-05-04.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 4"><span>04 <i>Cosy corner</i></span></button>
+<button class="photo" data-image="latest-2026-10-05-05.jpg" aria-label="View photo 5 of 7"><img src="latest-2026-10-05-05.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 5"><span>05 <i>Cosy corner</i></span></button>
+<button class="photo" data-image="latest-2026-10-05-06.jpg" aria-label="View photo 6 of 7"><img src="latest-2026-10-05-06.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 6"><span>06 <i>Cosy corner</i></span></button>
+<button class="photo" data-image="latest-2026-10-05-07.jpg" aria-label="View photo 7 of 7"><img src="latest-2026-10-05-07.jpg" loading="lazy" width="1600" height="1600" alt="Nikki relaxing in a cosy beanbag corner with fairy lights, photo 7"><span>07 <i>Cosy corner</i></span></button>
+</div></section></main>
+<footer><a class="brand" href="index.html">NIKKI MOON <span>☾</span></a><p>A little moonlight, a little me.</p><p>© <span id="year"></span> Nikki Moon</p></footer>
+<dialog id="lightbox" aria-label="Gallery photo"><button id="close-lightbox" aria-label="Close photo">×</button><img id="lightbox-image" alt=""></dialog>
+<script>
+document.querySelector('#year').textContent = new Date().getFullYear();
+const dialog = document.querySelector('#lightbox');
+document.querySelectorAll('.photo').forEach(button => button.addEventListener('click', () => {
+const image = document.querySelector('#lightbox-image');
+image.src = button.dataset.image; image.alt = button.querySelector('img').alt; dialog.showModal();
+}));
+document.querySelector('#close-lightbox').addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', event => {if(event.target === dialog) dialog.close();});
+</script>
+</body></html>
