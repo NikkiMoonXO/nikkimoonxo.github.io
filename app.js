@@ -1,6 +1,10 @@
 // Add confirmed profile URLs here. Blank entries remain clearly unavailable.
-const links = { instagram: '', tiktok: '', x: '', exclusive: '' };
-const labels = { instagram: 'Instagram', tiktok: 'TikTok', x: 'X' };
+const links = {
+  instagram: 'https://www.instagram.com/nikki.moon.xo/',
+  tiktok: 'https://www.tiktok.com/@nikkimoonxoxo2',
+  exclusive: 'https://www.fanvue.com/nikkimoonxoxo'
+};
+const labels = { instagram: 'Instagram', tiktok: 'TikTok' };
 for (const [key, label] of Object.entries(labels)) {
  const element = document.createElement(links[key] ? 'a' : 'span');
  element.textContent = links[key] ? label : `${label} · soon`;
