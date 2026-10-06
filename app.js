@@ -2,18 +2,19 @@
 const links = {
   instagram: 'https://www.instagram.com/nikki.moon.xo/',
   tiktok: 'https://www.tiktok.com/@nikkimoonxoxo2',
+  x: 'https://x.com/NikkiMoonXO',
   exclusive: 'https://www.fanvue.com/nikkimoonxoxo'
 };
-const labels = { instagram: 'Instagram', tiktok: 'TikTok' };
+const labels = { instagram: 'Instagram', tiktok: 'TikTok', x: 'X' };
 for (const [key, label] of Object.entries(labels)) {
  const element = document.createElement(links[key] ? 'a' : 'span');
- element.textContent = links[key] ? label : `${label} · soon`;
+ element.textContent = links[key] ? label : `${label} Â· soon`;
  if (links[key]) { element.href = links[key]; element.target = '_blank'; element.rel = 'noopener noreferrer'; }
  document.querySelector('#socials').append(element);
 }
 if (links.exclusive) {
  const link = document.createElement('a'); link.className = 'button';
- link.textContent = 'Visit exclusive content · 18+'; link.href = links.exclusive;
+ link.textContent = 'Visit exclusive content Â· 18+'; link.href = links.exclusive;
  link.target = '_blank'; link.rel = 'noopener noreferrer';
  document.querySelector('#exclusive-link').replaceChildren(link);
 }
